@@ -5,7 +5,7 @@ team modify Runner seeFriendlyInvisibles true
 team add Hunter
 team modify Hunter color blue
 team modify Hunter seeFriendlyInvisibles true
-scoreboard add hunterDeath deathCount
+scoreboard objectives add hunterDeath deathCount
 setblock 0 -64 0 yellow_shulker_box 
 
 # Loop
