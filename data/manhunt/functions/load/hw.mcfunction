@@ -1,1 +1,1 @@
-tellraw @a ["\n",{"text":"Manhunt loaded!","bold":true,"color":"aqua"},"\n",{"text":"Version 1.0","color":"gold"},"\n","\n",{"text":"Use /trigger manhunt:start to get started.","color":"gray"},"\n",{"text":"Put all runners on the runner team","italic":true,"color":"dark_gray"},"\n"]
+tellraw @a ["\n",{"text":"Manhunt loaded!","bold":true,"color":"aqua"},"\n",{"text":"Version 1.3","color":"gold"},"\n","\n",{"text":"Use /trigger manhunt:start to get started.","color":"gray"},"\n",{"text":"Put all runners on the runner team","italic":true,"color":"dark_gray"},"\n"]
