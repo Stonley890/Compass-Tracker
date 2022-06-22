@@ -1,9 +1,7 @@
-# Give compasses to hunters
-function manhunt:load/give-compass
-
-# Start countdown
-scoreboard players set .countdown Time 300
+execute store result score .countdown Time run scoreboard players get .countdown manhunt-options
+execute store result bossbar countdown max run scoreboard players get .countdown manhunt-options
+execute store result score @a[team=Runner] RemainingLives run scoreboard players get .lives manhunt-options
 bossbar set countdown players @a
 bossbar set countdown visible true
-execute unless score .countdown Time matches 1.. run tellraw @a {"text":"Runners can now start!"}
+tellraw @a {"text":"Runners can now start!","color":"red","bold":true}
 function manhunt:loop/countdown
