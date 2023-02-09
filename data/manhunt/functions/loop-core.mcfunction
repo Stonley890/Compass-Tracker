@@ -34,4 +34,4 @@ execute as @a[scores={manhunt-options=1..}] run scoreboard players enable @s man
 execute as @a[scores={manhunt-options=1..}] run scoreboard players set @s manhunt-options 0
 
 # Loop
-schedule function manhunt:loop-core 1
+schedule function manhunt:loop-core 10
