@@ -8,3 +8,6 @@ A data pack that allows any number of hunters to track any number of runners in 
 Each individual compass is updated by holding it. It will point to the nearest runner. It will not update if there are no runners in your dimension.
 
 ![2022-06-03_17 47 02](https://user-images.githubusercontent.com/79172597/172061011-94f2d10c-ed50-485c-b350-fcefc32ab7ea.png)
+
+Watch the showcase/tutorial video:
+[![https://youtu.be/Yghy4-SpHOg](https://i.ytimg.com/vi/Yghy4-SpHOg/maxresdefault.jpg)](https://youtu.be/Yghy4-SpHOg)
