@@ -16,6 +16,7 @@ scoreboard players set @a Countdown -1
 scoreboard players set @a Lives -1
 scoreboard players set .countdown manhunt-options 200
 scoreboard players set .lives manhunt-options 1
+scoreboard players set .compass-feedback manhunt-options 1
 scoreboard players enable @a manhunt-options
 scoreboard players enable @a Countdown
 scoreboard players enable @a Lives
