@@ -30,11 +30,15 @@ execute in minecraft:overworld run setblock 0 0 0 yellow_shulker_box
 execute in minecraft:the_nether run setblock 0 0 0 yellow_shulker_box
 execute in minecraft:the_end run setblock 0 0 0 yellow_shulker_box
 
+data modify storage manhunt:test Item set value {id: "minecraft:compass", tag: {display: {Name: '{"text":"Tracker Compass","color": "aqua","italic": false}'}, LodestoneTracked: 0b, LodestoneDimension: "minecraft:overworld", LodestonePos: {X: 0, Y: 0, Z: 0}}, Count: 1b}
+
+execute in minecraft:overworld run data modify block 0 0 0 Items append from storage manhunt:test Item
+execute in minecraft:the_nether run data modify block 0 0 0 Items append from storage manhunt:test Item
+execute in minecraft:the_end run data modify block 0 0 0 Items append from storage manhunt:test Item
+
 # Loop
-schedule function manhunt:loop/locate 1
-schedule function manhunt:loop-core 1
-schedule function manhunt:load/recover-compass 1
-schedule function manhunt:loop/detect_dimension 1
+schedule function manhunt:loop-core 1t
+schedule function manhunt:load/recover-compass 1t
 
 # Hello World
 function manhunt:load/hw
