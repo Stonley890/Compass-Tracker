@@ -22,3 +22,6 @@ Enable Cornucopia Endgame to keep multiple runners from separating. All living r
 ## Showcase
 Watch the showcase/tutorial video:
 [![https://youtu.be/Yghy4-SpHOg](https://i.ytimg.com/vi/Yghy4-SpHOg/maxresdefault.jpg)](https://youtu.be/Yghy4-SpHOg)
+
+You can also watch a real game played with this data pack from Waffle Irons Gaming:
+[![https://youtu.be/2bnbDVBrILw](https://i.ytimg.com/vi/2bnbDVBrILw/maxresdefault.jpg)](https://youtu.be/2bnbDVBrILw)
