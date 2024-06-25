@@ -1,3 +1,6 @@
+# Update the dimension scoreboard to reflect the current dimension
+execute as @a store result score @s Dimension run data get entity @s Dimension
+
 # Check if Hunter is in the same dimension as a runner and update compass
 execute as @a[team=Hunter,nbt={SelectedItem: {id: "minecraft:compass"}}] at @s if score @s Dimension = @a[team=Runner,gamemode=!spectator,limit=1,sort=nearest] Dimension run function manhunt:loop/locate
 execute as @a[team=Hunter,nbt={SelectedItem: {id: "minecraft:compass"}}] at @s if score .endgame manhunt-options matches 1 if score .endgame-active manhunt-options matches 1 run function manhunt:loop/locate
