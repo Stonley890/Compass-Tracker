@@ -31,7 +31,7 @@ execute in minecraft:overworld run setblock 0 0 0 yellow_shulker_box
 execute in minecraft:the_nether run setblock 0 0 0 yellow_shulker_box
 execute in minecraft:the_end run setblock 0 0 0 yellow_shulker_box
 
-data modify storage manhunt:test Item set value {id: "minecraft:compass", tag: {display: {Name: '{"text":"Tracker Compass","color": "aqua","italic": false}'}, LodestoneTracked: 0b, LodestoneDimension: "minecraft:overworld", LodestonePos: {X: 0, Y: 0, Z: 0}}, Count: 1b}
+data modify storage manhunt:test Item set value {id: "minecraft:compass",count:1,components:{"minecraft:custom_name":'{"color":"aqua","italic":false,"text":"Tracker Compass"}',"minecraft:lodestone_tracker":{target:{dimension:"minecraft:overworld",pos:[0,0,0]},tracked:0b}}}
 
 execute in minecraft:overworld run data modify block 0 0 0 Items append from storage manhunt:test Item
 execute in minecraft:the_nether run data modify block 0 0 0 Items append from storage manhunt:test Item

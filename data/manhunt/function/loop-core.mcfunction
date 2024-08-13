@@ -2,13 +2,13 @@
 function manhunt:loop/detect_dimension
 
 # If holding compass, replace with updated compass
-execute as @a[team=Hunter] at @s in minecraft:overworld if entity @s[nbt={SelectedItem: {id: "minecraft:compass", Count: 1b, tag: {display: {Name: '{"text":"Tracker Compass","color": "aqua","italic": false}'}}}}] if entity @a[team=Runner,distance=0..] run loot replace entity @s weapon.mainhand 1 mine 0 0 0 air{drop_contents: 1b}
-execute as @a[team=Hunter] at @s in minecraft:the_nether if entity @s[nbt={SelectedItem: {id: "minecraft:compass", Count: 1b, tag: {display: {Name: '{"text":"Tracker Compass","color": "aqua","italic": false}'}}}}] if entity @a[team=Runner,distance=0..] run loot replace entity @s weapon.mainhand 1 mine 0 0 0 air{drop_contents: 1b}
-execute as @a[team=Hunter] at @s in minecraft:the_end if entity @s[nbt={SelectedItem: {id: "minecraft:compass", Count: 1b, tag: {display: {Name: '{"text":"Tracker Compass","color": "aqua","italic": false}'}}}}] if entity @a[team=Runner,distance=0..] run loot replace entity @s weapon.mainhand 1 mine 0 0 0 air{drop_contents: 1b}
+execute as @a[team=Hunter] at @s in minecraft:overworld if entity @s[nbt={SelectedItem:{id:"minecraft:compass",count:1,components:{"minecraft:custom_name":'{"color":"aqua","italic":false,"text":"Tracker Compass"}'}}}] if entity @a[team=Runner,distance=0..] run item replace entity @s weapon.mainhand from block 0 0 0 container.0
+execute as @a[team=Hunter] at @s in minecraft:the_nether if entity @s[nbt={SelectedItem:{id:"minecraft:compass",count:1,components:{"minecraft:custom_name":'{"color":"aqua","italic":false,"text":"Tracker Compass"}'}}}] if entity @a[team=Runner,distance=0..] run item replace entity @s weapon.mainhand from block 0 0 0 container.0
+execute as @a[team=Hunter] at @s in minecraft:the_end if entity @s[nbt={SelectedItem:{id:"minecraft:compass",count:1,components:{"minecraft:custom_name":'{"color":"aqua","italic":false,"text":"Tracker Compass"}'}}}] if entity @a[team=Runner,distance=0..] run item replace entity @s weapon.mainhand from block 0 0 0 container.0
 
-execute as @a[team=Hunter] at @s in minecraft:overworld if entity @s[nbt={SelectedItem: {id: "minecraft:compass", Count: 1b, tag: {display: {Name: '{"text":"Tracker Compass","color": "aqua","italic": false}'}}}}] if score .endgame-active manhunt-options matches 1 run loot replace entity @s weapon.mainhand 1 mine 0 0 0 air{drop_contents: 1b}
-execute as @a[team=Hunter] at @s in minecraft:the_nether if entity @s[nbt={SelectedItem: {id: "minecraft:compass", Count: 1b, tag: {display: {Name: '{"text":"Tracker Compass","color": "aqua","italic": false}'}}}}] if score .endgame-active manhunt-options matches 1 run loot replace entity @s weapon.mainhand 1 mine 0 0 0 air{drop_contents: 1b}
-execute as @a[team=Hunter] at @s in minecraft:the_end if entity @s[nbt={SelectedItem: {id: "minecraft:compass", Count: 1b, tag: {display: {Name: '{"text":"Tracker Compass","color": "aqua","italic": false}'}}}}] if score .endgame-active manhunt-options matches 1 run loot replace entity @s weapon.mainhand 1 mine 0 0 0 air{drop_contents: 1b}
+execute as @a[team=Hunter] at @s in minecraft:overworld if entity @s[nbt={SelectedItem:{id:"minecraft:compass",count:1,components:{"minecraft:custom_name":'{"color":"aqua","italic":false,"text":"Tracker Compass"}'}}}] if score .endgame-active manhunt-options matches 1 run item replace entity @s weapon.mainhand from block 0 0 0 container.0
+execute as @a[team=Hunter] at @s in minecraft:the_nether if entity @s[nbt={SelectedItem:{id:"minecraft:compass",count:1,components:{"minecraft:custom_name":'{"color":"aqua","italic":false,"text":"Tracker Compass"}'}}}] if score .endgame-active manhunt-options matches 1 run item replace entity @s weapon.mainhand from block 0 0 0 container.0
+execute as @a[team=Hunter] at @s in minecraft:the_end if entity @s[nbt={SelectedItem:{id:"minecraft:compass",count:1,components:{"minecraft:custom_name":'{"color":"aqua","italic":false,"text":"Tracker Compass"}'}}}] if score .endgame-active manhunt-options matches 1 run item replace entity @s weapon.mainhand from block 0 0 0 container.0
 
 # Lives
 execute as @a[team=Runner,scores={Deaths=1..}] run scoreboard players remove @s RemainingLives 1
@@ -19,7 +19,7 @@ execute as @a[team=Runner,scores={Deaths=1..,RemainingLives=0}] run gamemode spe
 execute as @a[team=Runner,scores={Deaths=1..}] run scoreboard players set @s Deaths 0
 
 # Remove compasses from runners
-clear @a[team=Runner] compass{display: {Name: '{"text":"Tracker Compass","color": "aqua","italic": false}'}}
+clear @a[team=Runner] compass[custom_name='{"text":"Tracker Compass","color": "aqua","italic": false}']
 
 # Options
 ## Change countdown
