@@ -30,3 +30,12 @@ You can also watch a real game played with this data pack from Waffle Irons Gami
 Download the [latest release](https://github.com/Stonley890/Compass-Tracker/releases). Do not extract the file. Move the file to `SERVER_ROOT/WORLD/datapacks/` where `SERVER_ROOT` is the server folder name and `WORLD` is the world folder name. If in singleplayer, open the world folder from the edit menu in Minecraft's world select menu and move the file to the `datapacks` folder.
 
 Make sure the data pack is enabled using `/datapack list`, then `/reload` (or `/minecraft:reload` on Bukkit-based servers) to ensure everything is loaded correctly.
+
+## Feedback
+Please create an issue on GitHub if you have a feature request, bug report, or anything else of the sort: https://github.com/Stonley890/Compass-Tracker.
+
+## Contribution
+I would love if you opened a pull request! Contributions are warmly welcomed.
+
+## Support
+If you find value in this project, you can support me financially on [Liberapay](https://liberapay.com/Stonley890/) or [PayPal](https://www.paypal.com/paypalme/Stonley890).
